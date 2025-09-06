@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:white;
+      color:black;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: black;
+      color: white;
+      display: flex;
+      padding: 20px;
+      position: sticky;
+      justify-content: space-around;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+    }
+    nav a {
+      color:white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color:lightblue;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color:black;
+    }
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    #home {
+      background: linear-gradient(to right,navy, #3134ee);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    #home h2 {
+      color: white;
+    }
+    #home button {
+      padding: 10px 20px;
+      background: white;
+      color:black;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      
+    }
+    #home button:hover {
+      background:gray;
+      color:white;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background: navy;
+      left: 100%;
+      margin-left: -3px;
+    }
+    .timeline-box {
+      padding: 20px;
+      background:white;
+      border-radius: 8px;
+      width: 50%;
+      border: 1px solid black;
+      position: relative;
+    }
+    .timeline-box.right {
+      left: 60%;
+    }
+    .project {
+      background:white;
+      color: black;
+      border-radius: 10px;
+      border-color: black;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px black;
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+    
+      border-radius: 5px;
+    }
+    button {
+      background: navy;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Internship Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#internship">Internship</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm Megha Varshini B, and here I share insights from my internship journey, highlight key projects I've worked on, and showcase the skills I've developed throughout my learning experience.</p>
+    <button onclick="scrollToSection('internship')">Explore My Work</button>
+  </section>
+  <section id="internship">
+    <h2>Internship Experience</h2>
+    <div class="timeline">
+      <div class="timeline-box left">
+        <h3>Week 1: Introduction</h3>
+        <p>Learnt about company workflow, project management tools, and basic coding standards.</p>
+      </div>
+      <div class="timeline-box right">
+        <h3>Week 2: Frontend Development</h3>
+        <p>In week two i learned about front end develop,ent,which was very usefull to develop the websites.<br> HTML,CSS and Java script was the main topiics i coverent in this phase.</p>
+      </div>
+      <div class="timeline-box left">
+        <h3>Week 3: Backend Exposure</h3>
+        <p>Explored APIs, data handling, and integration with frontend features.</p>
+      </div>
+      <div class="timeline-box right">
+        <h3>Week 4: Final Project</h3>
+        <p>In my final week project ,I developed a student regist website using frontend and backend.</p>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p> in this porfolio website ,I'm explaing about my intenship experience and what I learned during my intenship period.</p>
+      </div>
+      <div class="project">
+        <h3>Task Manager</h3>
+        <p>Built a simple task management app using JavaScript for daily productivity.</p>
+      </div>
+      <div class="project">
+        <h3>API Integration</h3>
+        <p>Connected frontend with external APIs to fetch and display real-time data.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+ 
+</body>
+</html>
+
+
